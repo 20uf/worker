@@ -37,6 +37,4 @@ License
 
 This bundle is under the MIT license. See the complete license:
 
-```
-    LICENSE
-```
+[LICENSE] (./LICENSE)
