@@ -1,0 +1,13 @@
+parameters:
+    social_live:
+        database_host: 127.0.0.1
+        database_port: 3306
+        database_name: ~
+        database_user: ~
+        database_password: ~
+        database_driver: mysql
+    rabbitmq:
+        host: 127.0.0.1
+        port: 5672
+        user: guest
+        password: guest

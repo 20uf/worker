@@ -1,0 +1,51 @@
+{
+    "name": "Worker",
+    "description": "A basic architecture of a worker",
+    "type": "worker-project",
+    "keywords": ["worker"],
+    "homepage": "https://github.com/20uf/worker",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael COULLERET",
+            "email": "michael@coulleret.pro"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.9",
+        "monolog/monolog": "~1.11",
+        "symfony/console": "~3.0",
+        "symfony/process": "~3.0",
+        "symfony/yaml": "^3.0",
+        "php-amqplib/php-amqplib": "2.5.*",
+        "guzzlehttp/guzzle": "~6.0",
+        "incenteev/composer-parameter-handler": "^2.1"
+    },
+    "require-dev": {
+        "phake/phake": "@stable",
+        "phpunit/phpunit": "5.4.*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+    "autoload": {
+        "psr-4" : {
+            "Worker\\" : "src/Worker/",
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
+    }
+}

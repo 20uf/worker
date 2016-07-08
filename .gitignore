@@ -1,0 +1,22 @@
+# Managed by Composer
+/bin/*
+!bin/worker
+/vendor/
+
+# Build data
+/build/logs
+/build/coverage
+
+# Composer PHAR
+/composer.phar
+
+# IDE conf
+/.idea
+.buildpath
+.project
+.settings/
+/nbproject
+
+# Parameters
+/app/config/parameters.yml
+
